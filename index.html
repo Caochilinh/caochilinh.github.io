@@ -1,0 +1,841 @@
+<!--
+author: Boostraptheme
+author URL: https://boostraptheme.com
+License: Creative Commons Attribution 4.0 Unported
+License URL: https://creativecommons.org/licenses/by/4.0/
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .resume-section h1 {
+        font-size: 52px;
+        font-weight: 900;
+        color: #ffffff;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    }
+
+    .resume-section .subheading {
+        font-size: 20px;
+        font-weight: 600;
+        color: #f2f2f2;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    .resume-section {
+        background: rgba(0, 0, 0, 0.35);
+        /* giúp chữ sáng hơn nếu ảnh nền sáng */
+        padding: 40px 20px;
+    }
+
+    .skill-card {
+        background: linear-gradient(135deg, #1e90ff 60%, #00c3ff 100%);
+        color: #fff;
+        border-radius: 18px;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+        padding: 32px 18px 24px 18px;
+        margin-bottom: 24px;
+        transition: transform 0.2s, box-shadow 0.2s;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .skill-card .icon {
+        font-size: 48px;
+        margin-bottom: 18px;
+        display: block;
+        filter: drop-shadow(0 2px 8px #0003);
+    }
+
+    .skill-card h3 {
+        font-size: 2.2rem;
+        font-weight: 900;
+        margin-bottom: 8px;
+        letter-spacing: 1px;
+        text-shadow: 0 2px 8px #0002;
+    }
+
+    .skill-card p {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 0;
+        letter-spacing: 0.5px;
+    }
+
+    .skill-card:hover {
+        transform: translateY(-10px) scale(1.04);
+        box-shadow: 0 16px 40px 0 rgba(30, 144, 255, 0.25);
+        background: linear-gradient(135deg, #00c3ff 60%, #1e90ff 100%);
+    }
+
+    .portfolio-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 18px;
+        box-shadow: 0 6px 24px 0 rgba(30, 144, 255, 0.13);
+        margin-bottom: 32px;
+        transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .portfolio-item img {
+        border-radius: 18px;
+        transition: transform 0.3s;
+    }
+
+    .portfolio-item:hover {
+        transform: translateY(-10px) scale(1.04);
+        box-shadow: 0 16px 40px 0 rgba(30, 144, 255, 0.22);
+        z-index: 2;
+    }
+
+    .caption-port {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(30, 144, 255, 0.55);
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 18px;
+        transition: opacity 0.3s;
+    }
+
+    .portfolio-item:hover .caption-port {
+        opacity: 1;
+    }
+
+    .caption-port-content i {
+        color: #fff;
+        font-size: 3.5rem;
+        text-shadow: 0 4px 16px #0005;
+        animation: zoomIn 0.5s;
+    }
+
+    @keyframes zoomIn {
+        from {
+            transform: scale(0.7);
+        }
+
+        to {
+            transform: scale(1);
+        }
+    }
+
+    .section-title {
+        font-size: 2.3rem;
+        font-weight: 900;
+        letter-spacing: 2px;
+        color: #1e90ff;
+        margin-bottom: 18px;
+        text-shadow: 0 2px 8px #0001;
+    }
+
+    .grid .card {
+        border-radius: 18px;
+        box-shadow: 0 4px 18px 0 rgba(30, 144, 255, 0.10);
+        margin-bottom: 24px;
+        padding: 24px 18px;
+        background: #fff;
+        transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .grid .card:hover {
+        box-shadow: 0 12px 32px 0 rgba(30, 144, 255, 0.18);
+        transform: translateY(-6px) scale(1.03);
+        background: linear-gradient(135deg, #e3f0ff 60%, #f7fbff 100%);
+    }
+
+    .grid .card h3 {
+        color: #1e90ff;
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+
+    .grid .card .date {
+        color: #888;
+        font-size: 0.95rem;
+        font-style: italic;
+    }
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="shortcut icon" href="img/favico12.svg">
+    <title>Giám Đốc Dự Án VNG Lĩnh</title>
+
+    <!-- Global stylesheets -->
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+        rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/devicons/css/devicons.min.css" rel="stylesheet">
+    <link href="css/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body id="page-top"
+    style="background: url('img/profile-banner1.jpg') no-repeat center center fixed; background-size: cover;">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <span class="d-block d-lg-none  mx-0 px-0"><img src="img/logo-white.png" alt="" class="img-fluid"></span>
+            <span class="d-none d-lg-block">
+                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile1.jpg" alt="">
+            </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#about">Giới Thiệu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#experience">Dự Án Nổi Bật</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#skills">Kỹ Năng</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#awards">Giải</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#contact">Liên Hệ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#testimonial">Đánh Giá</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+
+        <!--====================================================
+                        ABOUT
+    ======================================================-->
+        <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+            <div class="my-auto">
+                <img src="img/logo-vng.png" class="img-fluid mb-3" alt="">
+                <h1 class="mb-0">CAO CHÍ
+                    <span class="text-primary">LĨNH</span>
+                </h1>
+                <div class="subheading mb-5">
+                    Xin chào, tôi là <b>Cao Chí Lĩnh</b> – Giám đốc Dự án tại Công ty VNG, với hơn 10 năm kinh
+                    nghiệm quản lý, triển khai và điều phối các dự án công nghệ thông tin quy mô lớn.
+                </div>
+                <p style="color: white; font-weight: bold;">
+                    Hiện tôi đang công tác tại Công ty VNG với vai trò Giám đốc Dự án, chịu trách nhiệm xây dựng
+                    chiến lược, quản lý đội nhóm và đảm bảo thành công cho các dự án chuyển đổi số, phát triển hệ
+                    thống
+                    phần mềm và giải pháp công nghệ cho doanh nghiệp
+
+
+
+                    </a>
+                    </li>
+                    </ul>
+            </div>
+        </section>
+
+        <!--====================================================
+                      <!-- Dự Án Nổi Bật -->
+        <section class="resume-section p-3 p-lg-5 d-flex d-column" id="experience">
+            <div class="my-auto">
+                <h2 class="section-title">DỰ ÁN NỔI BẬT</h2>
+                <div class="grid">
+
+                    <!-- Project Director - VNG Campus -->
+                    <div class="card blue">
+                        <h3>💼 Giám đốc Dự án – VNG Corporation (Campus Quận 7)</h3>
+                        <p>Chịu trách nhiệm điều hành và giám sát toàn bộ chuỗi dự án chuyển đổi số tại Campus VNG: bao
+                            gồm nền tảng hạ tầng CNTT, ứng dụng nội bộ, và hệ sinh thái sản phẩm số. Xây dựng roadmap kỹ
+                            thuật, quản lý ngân sách, điều phối đội ngũ hơn 50 nhân sự đa chức năng. Làm việc trực tiếp
+                            với Ban điều hành để đảm bảo tiến độ, chất lượng và KPI dự án.</p>
+                        <span class="date">March 2020 - Present</span>
+                    </div>
+
+                    <!-- Director - Zalo Business Platform -->
+                    <div class="card orange">
+                        <h3>📱 Giám đốc Dự án – Nền tảng Zalo Business & AI Chatbot</h3>
+                        <p>Triển khai nền tảng hỗ trợ doanh nghiệp tích hợp Zalo OA, ZNS, chatbot AI. Lên kiến trúc hệ
+                            thống, phối hợp với đội AI và Product để phát triển công cụ phản hồi khách hàng tự động.
+                            Chịu trách nhiệm thương mại hoá sản phẩm và kết nối hơn 1.000 doanh nghiệp trong giai đoạn
+                            đầu.</p>
+                        <span class="date">Jan 2019 – Feb 2020</span>
+                    </div>
+
+                    <!-- Director - VNG Cloud Migration -->
+                    <div class="card green">
+                        <h3>☁️ Giám đốc Dự án – Chuyển đổi Hạ tầng VNG Cloud</h3>
+                        <p>Chỉ đạo chiến dịch chuyển đổi toàn bộ hệ thống server nội bộ lên hạ tầng đám mây hybrid cloud
+                            (Kubernetes, OpenStack). Lập kế hoạch và giám sát vận hành xuyên suốt 6 tháng, đảm bảo
+                            uptime 99.99% cho hệ thống game, chat và thanh toán. Kết nối với đội bảo mật để triển khai
+                            chuẩn ISO và DevSecOps.</p>
+                        <span class="date">Aug 2017 – Dec 2018</span>
+                    </div>
+
+                    <!-- Junior Project Lead -->
+                    <div class="card purple">
+                        <h3>🎓 Quản lý Dự án Tập sự – VNG Internship Program</h3>
+                        <p>Bắt đầu sự nghiệp tại VNG với vai trò quản lý nhóm nhỏ thực tập sinh, hỗ trợ triển khai
+                            module quản trị nội bộ (HRM, timesheet). Tham gia các buổi cố vấn chiến lược Agile/Scrum và
+                            đào tạo DevOps. Đây là giai đoạn xây dựng nền tảng lãnh đạo và kỹ thuật vững chắc để phát
+                            triển lâu dài.</p>
+                        <span class="date">Jul 2016 – Jul 2017</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!--====================================================
+                          <!-- Portfolio Modals -->
+
+        <!-- Modal 1: Cloud nội bộ VNG -->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><i class="fa fa-times fa-2x"></i></div>
+                    <div class="modal-body">
+                        <h2 class="text-uppercase">Dự án Cloud nội bộ VNG</h2>
+                        <p class="item-intro text-muted">Triển khai hạ tầng cloud hybrid cho toàn hệ thống nội bộ tại
+                            Campus Quận 7.</p>
+                        <img class="img-fluid d-block mx-auto" src="img/portfolio/F1.jpg" alt="">
+                        <p>Điều phối xây dựng hệ thống Cloud nội bộ trên nền OpenStack & Kubernetes, giảm 40% chi phí
+                            vận hành, đảm bảo uptime 99.99%.</p>
+                        <ul class="list-inline">
+                            <li><strong>Khách hàng:</strong> VNG Corporation</li>
+                            <li><strong>Thời gian:</strong> Q1–Q3/2021</li>
+                            <li><strong>Vai trò:</strong> Giám đốc Dự án</li>
+                        </ul>
+                        <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i>
+                            Đóng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 2: An ninh mạng Game -->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><i class="fa fa-times fa-2x"></i></div>
+                    <div class="modal-body">
+                        <h2 class="text-uppercase">An ninh mạng hệ thống Game</h2>
+                        <p class="item-intro text-muted">Giám sát & ứng phó sự cố an ninh mạng cho các game chiến lược
+                            của VNG.</p>
+                        <img class="img-fluid d-block mx-auto" src="img/portfolio/F2.jpg" alt="">
+                        <p>Triển khai SIEM, giám sát log hệ thống realtime, xây dựng quy trình phản ứng sự cố (Incident
+                            Response).</p>
+                        <ul class="list-inline">
+                            <li><strong>Thời gian:</strong> 2022</li>
+                            <li><strong>Phạm vi:</strong> Game Studio & Backend</li>
+                        </ul>
+                        <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i>
+                            Đóng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 3: Data Center Campus -->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><i class="fa fa-times fa-2x"></i></div>
+                    <div class="modal-body">
+                        <h2 class="text-uppercase">Data Center VNG Campus</h2>
+                        <p class="item-intro text-muted">Xây dựng và tối ưu trung tâm dữ liệu tại Quận 7 phục vụ nội bộ
+                            & sản phẩm chiến lược.</p>
+                        <img class="img-fluid d-block mx-auto" src="img/portfolio/F3.jpg" alt="">
+                        <p>Thiết kế kiến trúc DC, tối ưu điện năng, hệ thống dự phòng và giám sát môi trường. Đạt tiêu
+                            chuẩn TIA-942 cấp III.</p>
+                        <ul class="list-inline">
+                            <li><strong>Vai trò:</strong> Quản lý hạ tầng</li>
+                            <li><strong>Thời gian:</strong> 2021</li>
+                        </ul>
+                        <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i>
+                            Đóng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 4: ZaloPay tích hợp TMĐT -->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><i class="fa fa-times fa-2x"></i></div>
+                    <div class="modal-body">
+                        <h2 class="text-uppercase">ZaloPay & tích hợp TMĐT</h2>
+                        <p class="item-intro text-muted">Kết nối ví điện tử với đối tác thương mại điện tử & hệ sinh
+                            thái Zalo.</p>
+                        <img class="img-fluid d-block mx-auto" src="img/portfolio/F4.jpg" alt="">
+                        <p>Phối hợp với đối tác lớn như Tiki, Shopee để tích hợp thanh toán qua ZaloPay. Tối ưu luồng
+                            xác thực, bảo mật và tốc độ xử lý giao dịch.</p>
+                        <ul class="list-inline">
+                            <li><strong>Vai trò:</strong> Giám đốc Dự án tích hợp</li>
+                            <li><strong>Thời gian:</strong> 2020</li>
+                        </ul>
+                        <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i>
+                            Đóng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 5: AI Chatbot doanh nghiệp -->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><i class="fa fa-times fa-2x"></i></div>
+                    <div class="modal-body">
+                        <h2 class="text-uppercase">AI Chatbot doanh nghiệp</h2>
+                        <p class="item-intro text-muted">Tự động hóa phản hồi khách hàng trên Zalo OA với AI.</p>
+                        <img class="img-fluid d-block mx-auto" src="img/portfolio/F5.jpg" alt="">
+                        <p>Triển khai nền tảng Chatbot tích hợp NLP, có khả năng phân loại ý định và phản hồi khách hàng
+                            realtime. Hơn 1.000 doanh nghiệp áp dụng.</p>
+                        <ul class="list-inline">
+                            <li><strong>Năm:</strong> 2022</li>
+                            <li><strong>Đối tượng:</strong> SME, TMĐT</li>
+                        </ul>
+                        <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i>
+                            Đóng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 6: ISO 27001 & bảo mật nội bộ -->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><i class="fa fa-times fa-2x"></i></div>
+                    <div class="modal-body">
+                        <h2 class="text-uppercase">ISO 27001 & bảo mật nội bộ</h2>
+                        <p class="item-intro text-muted">Triển khai hệ thống kiểm soát nội bộ và chứng chỉ bảo mật tại
+                            VNG.</p>
+                        <img class="img-fluid d-block mx-auto" src="img/portfolio/F6.jpg" alt="">
+                        <p>Xây dựng quy trình đánh giá rủi ro, lập khung bảo mật theo ISO 27001, phối hợp audit định kỳ
+                            toàn công ty.</p>
+                        <ul class="list-inline">
+                            <li><strong>Vai trò:</strong> Điều phối kiểm toán nội bộ</li>
+                            <li><strong>Thời gian:</strong> 2021</li>
+                        </ul>
+                        <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i>
+                            Đóng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 7: Hệ thống HRM nội bộ -->
+        <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><i class="fa fa-times fa-2x"></i></div>
+                    <div class="modal-body">
+                        <h2 class="text-uppercase">Hệ thống quản lý nhân sự nội bộ (HRM)</h2>
+                        <p class="item-intro text-muted">Hỗ trợ xây dựng hệ thống chấm công – KPI – lương thưởng toàn
+                            công ty.</p>
+                        <img class="img-fluid d-block mx-auto" src="img/portfolio/F7.jpg" alt="">
+                        <p>Phối hợp với phòng HR và Dev team xây dựng hệ thống HRM tích hợp chấm công, bảng lương, đánh
+                            giá nhân viên. Sử dụng Node.js & React.</p>
+                        <ul class="list-inline">
+                            <li><strong>Phòng ban:</strong> HR Tech</li>
+                            <li><strong>Thời gian:</strong> 2019</li>
+                        </ul>
+                        <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i>
+                            Đóng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 8: CI/CD và DevOps toàn hệ thống -->
+        <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><i class="fa fa-times fa-2x"></i></div>
+                    <div class="modal-body">
+                        <h2 class="text-uppercase">Tối ưu CI/CD & DevOps toàn hệ thống</h2>
+                        <p class="item-intro text-muted">Thiết kế & triển khai pipeline CI/CD phục vụ phát hành nhanh và
+                            ổn định.</p>
+                        <img class="img-fluid d-block mx-auto" src="img/portfolio/F1.jpg" alt="">
+                        <p>Tích hợp GitLab, Docker, Jenkins, Prometheus & Grafana để tự động hoá phát hành sản phẩm,
+                            rollback, giám sát logs & cảnh báo.</p>
+                        <ul class="list-inline">
+                            <li><strong>Thời gian:</strong> 2021–2022</li>
+                            <li><strong>Môi trường:</strong> On-prem & Cloud</li>
+                        </ul>
+                        <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i>
+                            Đóng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 9: Tăng cường bảo mật Cloud -->
+        <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><i class="fa fa-times fa-2x"></i></div>
+                    <div class="modal-body">
+                        <h2 class="text-uppercase">Tăng cường bảo mật Cloud</h2>
+                        <p class="item-intro text-muted">Đánh giá & gia cố bảo mật cho hạ tầng Cloud toàn công ty.</p>
+                        <img class="img-fluid d-block mx-auto" src="img/portfolio/F2.jpg" alt="">
+                        <p>Thiết lập MFA, phân quyền IAM chặt chẽ, rà quét lỗ hổng tự động (AquaSec, Trivy) và theo dõi
+                            bằng SIEM.</p>
+                        <ul class="list-inline">
+                            <li><strong>Thời gian:</strong> 2023</li>
+                            <li><strong>Phạm vi:</strong> Cloud VNG & đối tác</li>
+                        </ul>
+                        <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i>
+                            Đóng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--====================================================
+                        SKILLS
+======================================================-->
+        <section id="skills" class="py-5">
+            <div class="container text-center">
+                <h2 class="mb-4 text-uppercase font-weight-bold">NĂNG LỰC QUẢN LÝ DỰ ÁN <br><small>/ Project Management
+                        Expertise</small></h2>
+                <div class="row justify-content-center">
+
+                    <div class="col-md-3 mb-4">
+                        <div class="skill-card">
+                            <div class="icon">📊</div>
+                            <h3>95%</h3>
+                            <p>Quản lý tiến độ & ngân sách dự án</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4">
+                        <div class="skill-card">
+                            <div class="icon">🧠</div>
+                            <h3>90%</h3>
+                            <p>Phân tích hệ thống & kiến trúc CNTT</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4">
+                        <div class="skill-card">
+                            <div class="icon">🔐</div>
+                            <h3>88%</h3>
+                            <p>Thiết kế giải pháp an ninh mạng</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4">
+                        <div class="skill-card">
+                            <div class="icon">☁️</div>
+                            <h3>93%</h3>
+                            <p>Triển khai hạ tầng Cloud & DevOps</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        GIẢI
+        ======================================================-->
+        <section class="resume-section" id="awards">
+            <div class="container">
+                <h2 class="mb-5 text-center section-title">GIẢI THƯỞNG & CHỨNG NHẬN</h2>
+                <div class="row justify-content-center">
+
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card shadow-sm border-0 h-100 text-center award-card">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <i class="fa fa-trophy fa-3x text-warning"></i>
+                                </div>
+                                <h5 class="card-title font-weight-bold">TOP PROJECT DELIVERY AWARD</h5>
+                                <p class="card-text text-muted mb-2">Vinh danh đóng góp dự án lớn tại VNG năm 2022.</p>
+                                <span class="badge badge-primary mb-2">Dec 2022</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card shadow-sm border-0 h-100 text-center award-card">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <i class="fa fa-certificate fa-3x text-info"></i>
+                                </div>
+                                <h5 class="card-title font-weight-bold">PMI CERTIFIED PROJECT MANAGER</h5>
+                                <p class="card-text text-muted mb-2">Chứng nhận quản lý dự án quốc tế do PMI cấp.</p>
+                                <span class="badge badge-primary mb-2">Apr 2021 - Apr 2024</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card shadow-sm border-0 h-100 text-center award-card">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <i class="fa fa-user-tie fa-3x text-success"></i>
+                                </div>
+                                <h5 class="card-title font-weight-bold">GIÁM ĐỐC DỰ ÁN CHIẾN LƯỢC</h5>
+                                <p class="card-text text-muted mb-2">Được trao bởi ban điều hành VNG vì đóng góp trong
+                                    các dự án liên kết Hàn Quốc.</p>
+                                <span class="badge badge-primary mb-2">Mar 2023</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card shadow-sm border-0 h-100 text-center award-card">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <i class="fa fa-star fa-3x text-danger"></i>
+                                </div>
+                                <h5 class="card-title font-weight-bold">VNG BEST PROJECT LEADER</h5>
+                                <p class="card-text text-muted mb-2">Giải thưởng cấp tập đoàn, ghi nhận năng lực lãnh
+                                    đạo dự án toàn diện.</p>
+                                <span class="badge badge-primary mb-2">Dec 2023</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!--====================================================
+                  ĐÁNH GIÁ KHÁCH HÀNG
+======================================================-->
+        <section id="testimonial" class="bg-light py-5">
+            <div class="container">
+                <h2 class="mb-5 text-center section-title">Đánh Giá Khách Hàng</h2>
+                <div class="row justify-content-center">
+
+                    <div class="col-md-4 mb-4">
+                        <div class="testimonial-box p-4 shadow-sm bg-white rounded h-100 text-center">
+                            <div class="mb-3">
+                                <i class="fa fa-quote-left fa-2x text-primary"></i>
+                            </div>
+                            <img src="https://tse2.mm.bing.net/th/id/OIP.IHppQ4768rgmAr6bboRGjQHaLG?rs=1&pid=ImgDetMain&o=7&rm=3"
+                                alt="Nguyễn Thiên Thục" class="rounded-circle mb-3"
+                                style="width:64px;height:64px;object-fit:cover;border:3px solid #1e90ff;">
+                            <p class="font-italic">"Dịch vụ rất chuyên nghiệp và nhanh chóng. Tôi hoàn toàn hài lòng!"
+                            </p>
+                            <h5 class="font-weight-bold mb-0 mt-3">Phạm Thái Bảo</h5>
+                            <small class="text-muted">CEO, Công ty ABC</small>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="testimonial-box p-4 shadow-sm bg-white rounded h-100 text-center">
+                            <div class="mb-3">
+                                <i class="fa fa-quote-left fa-2x text-primary"></i>
+                            </div>
+                            <img src="https://cdn.idntimes.com/content-images/community/2021/10/cover-208953054-1009676313103173-7692224792278917743-n-58104fcf873a91b060fa273c628f6d83-157d48eb0e1a5c7ac0f96fa95ac5fe46.jpg"
+                                alt="Trần Công Nguyên" class="rounded-circle mb-3"
+                                style="width:64px;height:64px;object-fit:cover;border:3px solid #1e90ff;">
+                            <p class="font-italic">"Đội ngũ kỹ thuật tận tâm và hỗ trợ 24/7. Rất đáng tin cậy."</p>
+                            <h5 class="font-weight-bold mb-0 mt-3">Trần Phúc Tùng</h5>
+                            <small class="text-muted">Trưởng phòng IT, XYZ Corp</small>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="testimonial-box p-4 shadow-sm bg-white rounded h-100 text-center">
+                            <div class="mb-3">
+                                <i class="fa fa-quote-left fa-2x text-primary"></i>
+                            </div>
+                            <img src="https://kenh14cdn.com/k:thumb_w/600/YFMU4phyIeiN1VQB5zBGRZ768aPI9/Image/2013/11/1/02-573dc/tue-nghi-nu-giam-doc-21-tuoi-xinh-dep-va-ban-linh.jpg"
+                                alt="Lê Văn Thành" class="rounded-circle mb-3"
+                                style="width:64px;height:64px;object-fit:cover;border:3px solid #1e90ff;">
+                            <p class="font-italic">"Tôi rất ấn tượng với sự chuyên nghiệp trong triển khai hệ thống."
+                            </p>
+                            <h5 class="font-weight-bold mb-0 mt-3">Nguyễn Thanh Thảo</h5>
+                            <small class="text-muted">Founder, StartUp 123</small>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!--====================================================
+                              CONTACT
+        ======================================================-->
+        <section id="contact" class="contact-section py-5">
+            <div class="container">
+                <h2 class="text-center text-uppercase font-weight-bold mb-5">Liên hệ với tôi</h2>
+                <div class="row">
+                    <!-- Form -->
+                    <div class="col-md-6 mb-4">
+                        <form>
+                            <div class="form-group mb-3">
+                                <input type="text" class="form-control" placeholder="Họ và tên" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="email" class="form-control" placeholder="Email" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="text" class="form-control" placeholder="Tiêu đề">
+                            </div>
+                            <div class="form-group mb-4">
+                                <textarea class="form-control" rows="5" placeholder="Nội dung tin nhắn"
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary px-5 font-weight-bold">Gửi</button>
+                        </form>
+                    </div>
+                    <!-- Info -->
+                    <div class="col-md-6 mb-4">
+                        <div class="contact-info bg-white p-4 rounded shadow-sm h-100">
+                            <h5 class="font-weight-bold mb-3 text-primary">Thông tin liên hệ</h5>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2">
+                                    <i class="fa fa-map-marker text-primary mr-2"></i>
+                                    Văn phòng Công ty VNG, Quận 7, TP.HCM (Trụ sở chính)
+                                </li>
+                                <li class="mb-2"><i class="fa fa-phone text-primary mr-2"></i> <a
+                                        href="tel:0344205989">0348 584 598</a></li>
+                                <li class="mb-2"><i class="fa fa-envelope text-primary mr-2"></i> <a
+                                        href="mailto:caochilichoccho@gmail.com">caochilinh@gmail.com</a></li>
+                                <li class="mb-2">
+
+                                    <i class="fa fa-globe text-primary mr-2"></i>
+                                    <a href="https://caochilichoccho.github.io" target="_blank">caochilinh.github.io</a>
+                                </li>
+                            </ul>
+
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+    </section>
+
+
+    <section id="VNG-map" style="padding: 40px 0;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 28px; margin-bottom: 20px;">
+                Địa chỉ VNG Corporation - Chi nhánh Quận 7
+
+            </h2>
+            <div
+                style="width: 100%; height: 450px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.719065403134!2d106.72755907586948!3d10.831828889331734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31753b1cc77f18ab%3A0x9a5a2592c2368614!2zVlJWIENBTVBVUyAtIFZORyBDb3Jwb3JhdGlvbg!5e0!3m2!1svi!2s!4v1691133573602!5m2!1svi!2s"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <canvas id="falling-flowers-canvas"></canvas>
+    <script>
+        // Hoa rơi chuyên nghiệp
+        const canvas = document.getElementById('falling-flowers-canvas');
+        const ctx = canvas.getContext('2d');
+        let flowers = [];
+        const flowerColors = ['#ffb6c1', '#fff0f5', '#ffe4e1', '#ff69b4', '#ff1493', '#ffc0cb'];
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        function randomFlower() {
+            return {
+                x: Math.random() * canvas.width,
+                y: Math.random() * -canvas.height,
+                r: 8 + Math.random() * 10,
+                speed: 1 + Math.random() * 2,
+                drift: (Math.random() - 0.5) * 1.5,
+                color: flowerColors[Math.floor(Math.random() * flowerColors.length)],
+                angle: Math.random() * Math.PI * 2,
+                rotateSpeed: (Math.random() - 0.5) * 0.02
+            };
+        }
+
+        function drawFlower(f) {
+            ctx.save();
+            ctx.translate(f.x, f.y);
+            ctx.rotate(f.angle);
+            ctx.beginPath();
+            for (let i = 0; i < 5; i++) {
+                ctx.lineTo(0, -f.r);
+                ctx.rotate((Math.PI * 2) / 5);
+            }
+            ctx.closePath();
+            ctx.fillStyle = f.color;
+            ctx.globalAlpha = 0.8;
+            ctx.shadowColor = '#fff';
+            ctx.shadowBlur = 8;
+            ctx.fill();
+            ctx.globalAlpha = 1;
+            ctx.restore();
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            if (flowers.length < 40) {
+                flowers.push(randomFlower());
+            }
+            for (let f of flowers) {
+                f.y += f.speed;
+                f.x += f.drift;
+                f.angle += f.rotateSpeed;
+                drawFlower(f);
+            }
+            flowers = flowers.filter(f => f.y < canvas.height + 30);
+            requestAnimationFrame(animate);
+        }
+        animate();
+
+        // Đảm bảo canvas phủ toàn bộ trang và không ảnh hưởng nội dung
+        canvas.style.position = 'fixed';
+        canvas.style.top = 0;
+        canvas.style.left = 0;
+        canvas.style.pointerEvents = 'none';
+        canvas.style.zIndex = 9999;
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+
+
+
+</html>
